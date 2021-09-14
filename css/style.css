@@ -23,6 +23,7 @@ body {
     background-size: cover;
     position: relative;
 }
+/* @begin clock round centre using ::before pseudo selector*/
 .clock-container::before {
     content: '';
     width: 15px;
@@ -35,4 +36,30 @@ body {
     transform: translate(-50% -50%);
     z-index: 999;
 }
-
+/* @end clock round centre */
+.hour,
+.minute,
+.second {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%) rotate(90deg);
+    transform-origin: bottom;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.hour {
+    width: 8px;
+    height: 38px;
+    background-color: #000;
+}
+.mnute {
+    width: 5px;
+    height: 38px;
+    background-color: #000;
+}
+.second {
+    width: 3px;
+    height: 40%;
+    background-color: #ff0000;
+}
