@@ -16,12 +16,12 @@ function rotate() {
     // rotating parts --> how many parts to rotate for each clock hand
     const secondsPart = seconds / 60;
     const minutesPart = (secondsPart + minutes) / 60;
-    const hoursPart = (minutesPart + hours) / 60;
+    const hoursPart = (minutesPart + hours) / 12;
 
     // degree to rotate
-    const secondsRotate = seconds * 360;
-    const minutesRotate = minutes * 360;
-    const hoursRotate = hours * 360;
+    const secondsRotate = secondsPart * 360;
+    const minutesRotate = minutesPart * 360;
+    const hoursRotate = hoursPart * 360;
     
     // rotate each of the element using template literals
     hourHand.style.transform = `rotate(${hoursRotate}deg)`;
