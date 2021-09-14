@@ -61,7 +61,7 @@ h1 {
 }
 .hour {
     width: 8px;
-    height: 45px;
+    height: 80px;
     background-color: #000;
 }
 .minute {

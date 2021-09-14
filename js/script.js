@@ -29,5 +29,5 @@ function rotate() {
     secondHand.style.transform = `rotate(${secondsRotate}deg)`;
 
 }
-// call rotate function for every 1 second interval
+// call rotate function for every 1 second interval (1000 per millsecond)
 setInterval(rotate, 1000)
